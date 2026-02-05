@@ -105,9 +105,12 @@ function App() {
             onKeyDown={e => e.key === "Enter" && handleAdd()}
             placeholder="Add a new task..."
           />
-          <button onClick={handleAdd} disabled={!title.trim()}>
-            +
-          </button>
+          <button
+            className="add-btn"
+            onClick={handleAdd}
+            disabled={!title.trim()}
+            aria-label="Add task"
+          />
         </div>
 
         {error && <p className="error">{error}</p>}
